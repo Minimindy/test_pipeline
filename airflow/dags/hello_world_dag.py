@@ -14,7 +14,7 @@ with DAG(
     hello_task = KubernetesPodOperator(
         task_id="hello",
         name="hello",
-        namespace="mlops-lab",
+        namespace="airflow",
         image="alpine:latest",
         cmds=["echo", "Hello World"],
         get_logs=True,
