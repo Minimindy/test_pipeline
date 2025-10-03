@@ -28,7 +28,7 @@ with DAG(
     dag_id="text_pipeline",
     default_args=default_args,
     start_date=datetime(2025, 10, 2),
-    schedule_interval="@daily",
+    schedule="@daily",
     catchup=False,
 ) as dag:
 
@@ -44,7 +44,7 @@ with DAG(
         ],
         secrets=secrets,
         get_logs=True,
-        is_delete_operator_pod=True,
+        delete_policy="Always",
         service_account_name=SERVICE_ACCOUNT,
     )
 
@@ -60,7 +60,7 @@ with DAG(
         ],
         secrets=secrets,
         get_logs=True,
-        is_delete_operator_pod=True,
+        delete_policy="Always",
         service_account_name=SERVICE_ACCOUNT,
     )
 
@@ -76,7 +76,7 @@ with DAG(
         ],
         secrets=secrets,
         get_logs=True,
-        is_delete_operator_pod=True,
+        delete_policy="Always",
         service_account_name=SERVICE_ACCOUNT,
     )
 
