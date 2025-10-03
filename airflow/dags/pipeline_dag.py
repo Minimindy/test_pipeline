@@ -44,7 +44,6 @@ with DAG(
         ],
         secrets=secrets,
         get_logs=True,
-        delete_policy="Always",
         service_account_name=SERVICE_ACCOUNT,
     )
 
@@ -60,7 +59,6 @@ with DAG(
         ],
         secrets=secrets,
         get_logs=True,
-        delete_policy="Always",
         service_account_name=SERVICE_ACCOUNT,
     )
 
@@ -76,7 +74,6 @@ with DAG(
         ],
         secrets=secrets,
         get_logs=True,
-        delete_policy="Always",
         service_account_name=SERVICE_ACCOUNT,
     )
 
